@@ -24,6 +24,7 @@ No cd estudantes-api
 Add do estudante é na extensao do chrome (ainda)
     roda o servidor
   node app.js
+  nodemon app
 
 	+ body-parser@1.18.3
 	+ mongoose@5.3.4

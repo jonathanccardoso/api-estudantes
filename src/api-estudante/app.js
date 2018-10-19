@@ -1,7 +1,61 @@
+//funcional
 var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
     app = express();
+    Estudantes = require('./models/estudantes.js');
+
+mongoose.connect('mongodb://localhost/api', function(err){
+  if(err){
+    console.log('Erro no mongodb ' + err);
+  }
+})
+
+app.use(bodyParser());
+
+var port = process.env.PORT || 3000;
+
+//rotas
+var router = express.Router();
+
+//http://localhost:3000/api
+router.get('/', function(req,res){
+  res.json({message: 'API estudantes'});
+  //console.log('api estudantes');
+})
+
+router.route('/estudantes')
+ .get(function(req,res){
+    Estudantes.find(function (err, dados) {
+      if (err) {
+        res.send(err);
+      }
+      res.json(dados);
+    })
+  })
+  .post(function(req,res){
+    var estudantes = new Estudantes();
+    estudantes.nome = req.body.nome;
+    
+    estudantes.save(function (err) {
+      if (err) {
+        res.send(err);
+      }
+      res.json({ message: 'Estudante cadastrado' });
+    });
+  });
+
+app.use('/api', router);
+
+app.listen(port, function(){
+  console.log('Servidor rodando na porta: '+port);
+})
+
+
+/*var express = require('express'),
+    mongoose = require('mongoose'),
+    bodyParser = require('body-parser'),
+    app = express(),
     Estudantes = require('./models/estudantes.js');
 
 mongoose.connect('mongodb://localhost/api', function (err) {
@@ -81,3 +135,4 @@ app.use('/api', router);
 app.listen(port, function () {
   console.log('Servidor rodando na porta: ' + port);
 })
+*/
