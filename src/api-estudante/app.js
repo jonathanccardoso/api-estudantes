@@ -1,15 +1,15 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
-    app = express(),
-    Estudantes = require('../models/estudantes');
+    app = express();
+    Estudantes = require('./models/estudantes.js');
 
 mongoose.connect('mongodb://localhost/api', function (err) {
   if (err) {
     console.log('Erro no mongodb '+ err);
   }
 })
- 
+
 app.use(bodyParser());
 
 var port = process.env.PORT || 3000;
@@ -23,7 +23,7 @@ router.get('/', function (req, res) {
 })
 
 router.get('/estudantes')
-  .get(function (req, res) {
+  .get(function(req,res){
     Estudantes.find(function (err, dados) {
       if (err) {
         res.send(err);
@@ -31,7 +31,7 @@ router.get('/estudantes')
       res.json(dados);
     })
   })
-  .post(function (req, res) {
+  .post(function(req,res){
     var estudantes = new Estudantes();
     estudantes.nome = req.body.nome;
 

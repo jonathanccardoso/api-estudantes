@@ -1,7 +1,8 @@
+//onde a api local irá ser consumida!
 $(document).ready(function(){
-	
+
 	// /json ou .json
-	var urlStr = "https://localhost:3000/estudantes"; 
+	var urlStr = "https://localhost:3000/estudantes";
 
 	//função do jquery
 	//biblbioteca que pega servidores externos e internos
@@ -11,7 +12,7 @@ $(document).ready(function(){
 		dataType : "json",
 		success : function(data){
 			console.log(data);
-			
+
 			//mostrar todos os estudantes
 			pagina = documents.getElementById('pagina-teste');
 			pagina.innerHTML = '';
@@ -43,11 +44,11 @@ $(document).ready(function(){
 		},
 		error : function(erro){
 			console.log(erro);
-		}		
+		}
 	});
 	function estudanteRemove(id){
-		//chamar function la do app.js 
-		Estudantes.remove(id);		
+		//chamar function la do app.js
+		Estudantes.remove(id);
 	}
 });
 
@@ -59,7 +60,7 @@ $(document).ready(function(){
 	})
 	.done(function retorno){
 		console.log(retorno);
-		alert(retorno.estudantes[0].nome);//1 estudante - nome 
-	}	
+		alert(retorno.estudantes[0].nome);//1 estudante - nome
+	}
 
 */

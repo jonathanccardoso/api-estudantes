@@ -1,8 +1,8 @@
 var mongoose = require('mongoose'),
-    scherma = mongoose.Schema();
+    Schema  = mongoose.Schema;
 
-var EstudanteSchema = new Schema({
-  nome: { type: String, required: true, trim: true }
+var EstudantesSchema = new Schema({
+  nome: {type: String, required: true, trim: true}
 });
 
-module.exports = mongoose.model('Estudantes', EstudantesRanges);
+module.exports = mongoose.model('Estudantes', EstudantesSchema);

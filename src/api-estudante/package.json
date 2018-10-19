@@ -7,29 +7,3 @@
     "body-parser" : "~1.0.1"
   }
 }
-
-/*
-=> steps
-deixar sempre o postman na extensao(2 link da extensoes)
-clicando na aba ao lado da foto do perfil
-
-https://www.youtube.com/watch?v=OflkE1WQfjw
-- tem que ter um bom desing(bootstrap)
-- a api foi chamada
-- o mongodb nao esta pegando
-
-no cd estudantes-api
- sudo npm install
-  install dependencies
- npm install -g nodemon
-  install nodemon
- a add do estudante é na extensao do chrome (ainda)
- roda o servidor
-  node app.js
-
-
-	+ body-parser@1.18.3
-	+ mongoose@5.3.4
-	+ express@4.16.4
-	added 73 packages in 8.72s
-*/
