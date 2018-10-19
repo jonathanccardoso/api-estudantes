@@ -6,7 +6,7 @@ var express = require('express'),
 
 mongoose.connect('mongodb://localhost/api', function (err) {
   if (err) {
-    console.log('Erro no mongodb ' + err);
+    console.log('Erro no mongodb '+ err);
   }
 })
  
@@ -19,6 +19,7 @@ var router = express.Router();
 
 router.get('/', function (req, res) {
   res.json({ message: 'API estudantes' });
+  //or   res.send('Hello world!');
 })
 
 router.get('/estudantes')
@@ -53,8 +54,7 @@ router.route('/estudantes/:id')
   })
   //update
   .put(function (req, res) {
-    Estudantes.findById(req.params.id, function
-      (err, dados) {
+    Estudantes.findById(req.params.id, function (err, dados) {
       if (err) {
         res.send(err);
       }
@@ -63,7 +63,7 @@ router.route('/estudantes/:id')
         if (err) {
           res.send(err);
         }
-        res.json({ message: 'Estudante atualizado' })
+        res.json({ message: 'Estudante atualizado' });
       })
     });
   })
@@ -72,12 +72,12 @@ router.route('/estudantes/:id')
       if (err) {
         res.send(err);
       }
-      res.json({ message: 'Esstudante excluído' });
+      res.json({ message: 'Estudante excluído' });
     })
   });
 
 app.use('/api', router);
 
 app.listen(port, function () {
-  console.log('Servidor rodando na porta: ' + port)
+  console.log('Servidor rodando na porta: ' + port);
 })

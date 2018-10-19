@@ -1,6 +1,15 @@
 # project-estudante
 
-https://www.youtube.com/watch?v=WnMRMyZFOZs
+api-estudate
+- localhost
+- postman
+- nodejs
 
-(-)
-https://www.youtube.com/watch?v=OflkE1WQfjw
+project
+- jquery
+- bootstrap
+
+(crud) https://www.youtube.com/watch?v=HsKN5wBODe0
+
+https://www.youtube.com/watch?v=YMJEAFVl63E
+https://www.youtube.com/watch?v=WnMRMyZFOZs
