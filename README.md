@@ -1,4 +1,4 @@
-# API-Estudante
+# Estudante
 
 API (error in mongodb database)
 - localhost (postman)
