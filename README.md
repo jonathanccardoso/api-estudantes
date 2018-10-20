@@ -11,12 +11,12 @@ Project
 
 ## Api dependencies
 
-  sudo npm install
+  - sudo npm install
     install dependencies
-  npm install -g nodemon
+  - npm install -g nodemon
     install nodemon
-  node app.js
-  nodemon app
+  - node app.js
+  - nodemon app
     runs the server
 
 	+ body-parser@1.18.3
