@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Estudantes</title>
+	<meta name="description" content="Site para studantes">
+	<meta name="author" content="Jonathan Cardoso">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid">
+		<h1 class="text-center">Estudantes</h1>
+		<button type="button" class="btn btn-success" href="#adicionar" role="button" class="btn" data-toggle="modal">Adicionar</button>
+		<!-- modals -->
+		<div class="modal fade" id="editar" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="myModalLabel">Editar</h5> 
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<div class="form-group">
+								<label for="exampleInputNome">Nome</label>
+								<input type="email" class="form-control" id="exampleInputNome" />
+							</div>
+							<div class="form-group">
+								<label for="exampleInputFile">Imagem</label>
+								<input type="file" class="form-control-file" id="exampleInputFile" />
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Editar</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="adicionar" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="myModalLabel">Adicionar estudante</h5> 
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<div class="form-group">
+								<label for="exampleInputNome">Nome</label>
+								<input type="email" class="form-control" id="exampleInputNome" />
+							</div>
+							<div class="form-group">
+								<label for="exampleInputFile">Imagem</label>
+								<input type="file" class="form-control-file" id="exampleInputFile" />
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Adicionar</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="estudante" class="row">
+
+		</div>
+		
+		<footer class="row mt-3 p-3">
+			<div class="container">
+				<p class="float-left m-4"><b>© 2018 Jonathan Cardoso.</b> All rights reserved.</p>
+			</div>
+		</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/estudante.js"></script>
+</body>
+</html>
